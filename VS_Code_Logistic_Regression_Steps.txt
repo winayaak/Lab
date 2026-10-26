@@ -1,0 +1,87 @@
+VS CODE STEPS — LOGISTIC REGRESSION PRACTICAL
+
+FILES NEEDED
+Keep these files together in one folder:
+1. main.py
+2. Student.csv
+3. Practical.pdf (reference only; not needed to run the program)
+
+STEP 1: CREATE A PROJECT FOLDER
+1. Go to your Desktop.
+2. Right-click an empty area.
+3. Select New > Folder.
+4. Name the folder LogisticRegressionPractical.
+5. Move main.py, Student.csv, and Practical.pdf into this folder.
+   Make sure the CSV filename is exactly Student.csv.
+
+STEP 2: OPEN THE FOLDER IN VS CODE
+1. Open Visual Studio Code.
+2. Select File > Open Folder.
+3. Choose Desktop > LogisticRegressionPractical.
+4. Click Select Folder / Open.
+5. If VS Code asks whether you trust the folder, choose the appropriate trust option only if you trust the files.
+
+STEP 3: CHECK WHETHER PYTHON IS INSTALLED
+1. In VS Code, select Terminal > New Terminal.
+2. Type:
+   python --version
+3. Press Enter.
+4. If that command is not recognized, try:
+   py --version
+5. If neither command works, Python may not be installed or may not be on PATH. Install Python only if you have permission to do so, then reopen VS Code.
+
+STEP 4: SELECT THE PYTHON INTERPRETER
+1. In VS Code, press Ctrl+Shift+P.
+2. Type: Python: Select Interpreter
+3. Select an installed Python 3 interpreter.
+4. If this command is unavailable, install the Microsoft Python extension from the Extensions panel, if permitted.
+
+STEP 5: INSTALL THE REQUIRED LIBRARIES
+In the VS Code terminal, run ONE of these commands.
+
+If `python --version` worked:
+   python -m pip install pandas matplotlib numpy scikit-learn
+
+If only `py --version` worked:
+   py -m pip install pandas matplotlib numpy scikit-learn
+
+Wait for installation to finish. An internet connection may be required.
+
+STEP 6: CHECK THE CSV FILENAME IN THE CODE
+1. Click main.py in the Explorer panel.
+2. Find this line:
+   data = pd.read_csv("Student.csv")
+3. Confirm the CSV file in the same folder is named exactly Student.csv.
+4. Save the file with Ctrl+S.
+
+STEP 7: RUN THE PROGRAM
+Method A:
+1. Open main.py.
+2. Right-click inside the editor.
+3. Select Run Python File in Terminal.
+
+Method B:
+In the terminal, type:
+   python main.py
+If you use the `py` launcher instead, type:
+   py main.py
+
+STEP 8: CHECK THE OUTPUT
+The terminal should display:
+- Accuracy
+- Prediction for a new student
+- Prediction probabilities
+
+A graph window should also appear. Close the graph window to return to the program.
+
+COMMON ERRORS
+1. FileNotFoundError: Make sure Student.csv and main.py are in the same folder and the filename matches exactly.
+2. No module named pandas/matplotlib/numpy/sklearn: Run the library installation command again using the same Python interpreter selected in VS Code.
+3. `python` is not recognized: Try `py`; if neither works, Python may need to be installed or added to PATH.
+4. Permission denied / installation blocked: Ask the lab technician. Do not bypass the lab computer's restrictions.
+5. Graph does not appear: Check for errors in the terminal and make sure matplotlib installed successfully.
+
+IMPORTANT
+- Practical.pdf is only for reference; it is not required to run the Python program.
+- The computer may require permission to install Python, VS Code extensions, or libraries.
+- Your PDF's final dataset row appears incomplete, so the provided CSV should contain only complete rows unless your teacher supplies the missing value.
