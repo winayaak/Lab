@@ -1,4 +1,4 @@
-Logistic Regression Practical (Experiment 02)
+Logistic Regression Practical 
 
 Files:
 - Student.csv: dataset used by the experiment
